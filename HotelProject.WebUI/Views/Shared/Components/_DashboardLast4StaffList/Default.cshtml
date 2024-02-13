@@ -1,0 +1,29 @@
+﻿
+
+@model List<HotelProject.WebUI.Dtos.StaffDto.ResultLast4StaffDto>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-center">
+                        @if (!string.IsNullOrEmpty(item.SocialMedia1))
+                        {
+                            <img src="@item.SocialMedia1" class="rounded-circle" alt="" style="max-width: 100%; height: auto; max-height: 200px;">
+                        }
+                        else
+                        {
+                            <img src="~/adminweb/images/users/a.png" class="rounded-circle" alt="Default Image" style="max-width: 100%; height: auto; max-height: 200px;">
+                        }
+                        <h5 class="mt-3 mb-1">@item.Name</h5>
+                        <p class="m-0">@item.Title</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+

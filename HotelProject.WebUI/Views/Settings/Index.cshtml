@@ -1,0 +1,30 @@
+﻿@model HotelProject.WebUI.Models.Settings.UserEditViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<h1>Profil Bilgileri Ve Şifre Güncelleme</h1>
+<form method="post">
+    <label> Ad</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <br />
+    <label> Soyad</label>
+    <input type="text" class="form-control" asp-for="Surname" />
+    <br />
+    <label> Mail Adresi</label>
+    <input type="text" class="form-control" asp-for="Email" />
+    <br />
+    <label> Kullanıcı Adı</label>
+    <input type="text" class="form-control" asp-for="Username" readonly />
+    <br />
+    <label> Şifre</label>
+    <input type="password" class="form-control" asp-for="Password" />
+    <br />
+    <label> Şifre Tekrarı</label>
+    <input type="password" class="form-control" asp-for="Confirmpassword" />
+    <br />
+    <button class="btn btn-primary"> Bilgileri Güncelle</button>
+
+</form>
+
